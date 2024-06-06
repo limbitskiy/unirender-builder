@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - /mnt/2E3051B82E95158A/Projects/unirender-app-vue:/app/unirender-app-vue
+      - /mnt/2E3051B82E95158A/Projects/test-components:/app/components
