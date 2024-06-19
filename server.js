@@ -15,7 +15,7 @@ const componentFolderExists = fs.readdirSync(destinationFolder);
 
 if (!appFolderExists.length || !componentFolderExists.length) {
   console.error(`Volumes error`);
-  res.status(500).send(`Volumes error`);
+  // res.status(500).send(`Volumes error`);
   return;
 }
 
