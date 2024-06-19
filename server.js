@@ -7,17 +7,17 @@ const port = 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const appPath = "./unirender-app-vue";
-const destinationFolder = "./components";
+// const appPath = "./unirender-app-vue";
+// const destinationFolder = "./components";
 
-const appFolderExists = fs.readdirSync(appPath);
-const componentFolderExists = fs.readdirSync(destinationFolder);
+// const appFolderExists = fs.readdirSync(appPath);
+// const componentFolderExists = fs.readdirSync(destinationFolder);
 
-if (!appFolderExists.length || !componentFolderExists.length) {
-  console.error(`Volumes error`);
-  // res.status(500).send(`Volumes error`);
-  return;
-}
+// if (!appFolderExists.length || !componentFolderExists.length) {
+//   console.error(`Volumes error`);
+//   // res.status(500).send(`Volumes error`);
+//   return;
+// }
 
 app.post("/build", (req, res) => {
   const component = req.body.component;
